@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Interest Calculator</title>
+</head>
+<body>
+  <h1>Simple Interest Calculator</h1>
+  <label for="principal">Principal Amount:</label>
+  <input type="text" id="principal" oninput="calculateInterest()">
+  <br>
+  <label for="rate">Interest Rate (%):</label>
+  <input type="text" id="rate" oninput="calculateInterest()">
+  <br>
+  <label for="time">Time (in years):</label>
+  <input type="text" id="time" oninput="calculateInterest()">
+  <br>
+  <h2 id="result"></h2>
+
+  <script>
+    function calculateInterest() {
+      var principal = parseFloat(document.getElementById('principal').value);
+      var rate = parseFloat(document.getElementById('rate').value);
+      var time = parseFloat(document.getElementById('time').value);
+
+      var interest = (principal * rate * time) / 100;
+
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'Simple Interest: ' + interest.toFixed(2);
+    }
+  </script>
+</body>
+</html>
