@@ -6,15 +6,16 @@
 <body>
   <h1>Simple Interest Calculator</h1>
   <label for="principal">Principal Amount:</label>
-  <input type="text" id="principal" oninput="calculateInterest()">
+  <input type="range" min="0" max="100000" id="principal" oninput="calculateInterest()">
   <br>
   <label for="rate">Interest Rate (%):</label>
-  <input type="text" id="rate" oninput="calculateInterest()">
+  <input type="range" min="0" max="15" id="rate" oninput="calculateInterest()">
   <br>
   <label for="time">Time (in years):</label>
-  <input type="text" id="time" oninput="calculateInterest()">
+  <input type="range"  min="0" max="10" id="time" oninput="calculateInterest()">
   <br>
   <h2 id="result"></h2>
+  <!--<marquee id="result"></marquee>-->
 
   <script>
     function calculateInterest() {
